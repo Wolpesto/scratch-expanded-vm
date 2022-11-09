@@ -1244,7 +1244,8 @@ const BoostTiltDirection = {
     DOWN: 'down',
     LEFT: 'left',
     RIGHT: 'right',
-    ANY: 'any'
+    ANY: 'any',
+    SHIFT: 'shift'
 };
 
 /**

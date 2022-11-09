@@ -28,6 +28,12 @@ const SEQUENCE_HAT_TIMEOUT = 100;
 const KEY_ID_SPACE = 'SPACE';
 
 /**
+ * An id for the shift arrow key on a keyboard.
+ */
+ const KEY_ID_SHIFT = 'SHIFT';
+
+
+/**
  * An id for the left arrow key on a keyboard.
  */
 const KEY_ID_LEFT = 'LEFT';
@@ -53,6 +59,7 @@ const KEY_ID_DOWN = 'DOWN';
  */
 const SCRATCH_KEY_NAME = {
     [KEY_ID_SPACE]: 'space',
+    [KEY_ID_SHIFT]: 'shift',
     [KEY_ID_LEFT]: 'left arrow',
     [KEY_ID_UP]: 'up arrow',
     [KEY_ID_RIGHT]: 'right arrow',
@@ -120,6 +127,11 @@ class Scratch3MakeyMakeyBlocks {
                 id: 'makeymakey.spaceKey',
                 default: 'space',
                 description: 'The space key on a computer keyboard.'
+            }),
+            [KEY_ID_SHIFT]: formatMessage({
+                id: 'makeymakey.shiftkey',
+                default: 'shift',
+                description: 'Short name for the shift key on a computer keyboard.'
             }),
             [KEY_ID_LEFT]: formatMessage({
                 id: 'makeymakey.leftArrowShort',
@@ -217,6 +229,14 @@ class Scratch3MakeyMakeyBlocks {
                                 description: 'The space key on a computer keyboard.'
                             }),
                             value: KEY_ID_SPACE
+                        },
+                        {
+                            text: formatMessage({
+                                id: 'makeymakey.shiftkey',
+                                default: 'shift',
+                                description: 'The shift key on a computer keyboard.'
+                            }),
+                            value: KEY_ID_SHIFT
                         },
                         {
                             text: formatMessage({

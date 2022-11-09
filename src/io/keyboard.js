@@ -6,6 +6,7 @@ const Cast = require('../util/cast');
  */
 const KEY_NAME = {
     SPACE: 'space',
+    SHIFT: 'shift',
     LEFT: 'left arrow',
     UP: 'up arrow',
     RIGHT: 'right arrow',
@@ -49,6 +50,7 @@ class Keyboard {
         // Convert space and arrow keys to their Scratch key names.
         switch (keyString) {
         case ' ': return KEY_NAME.SPACE;
+        case 'Shift': return KEY_NAME.SHIFT;
         case 'ArrowLeft':
         case 'Left': return KEY_NAME.LEFT;
         case 'ArrowUp':
@@ -81,10 +83,11 @@ class Keyboard {
             }
             switch (keyArg) {
             case 32: return KEY_NAME.SPACE;
-            case 37: return KEY_NAME.LEFT;
-            case 38: return KEY_NAME.UP;
-            case 39: return KEY_NAME.RIGHT;
-            case 40: return KEY_NAME.DOWN;
+            case 37: return KEY_NAME.SHIFT;
+            case 38: return KEY_NAME.LEFT;
+            case 39: return KEY_NAME.UP;
+            case 40: return KEY_NAME.RIGHT;
+            case 41: return KEY_NAME.DOWN;
             }
         }
 

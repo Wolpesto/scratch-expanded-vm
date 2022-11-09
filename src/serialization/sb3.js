@@ -52,6 +52,7 @@ const CORE_EXTENSIONS = [
     'math',
     'motion',
     'operator',
+    'advanced',
     'procedures',
     'sensing',
     'sound'
